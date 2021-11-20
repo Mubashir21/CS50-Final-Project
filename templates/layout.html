@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="nav-bar">
+        <a class="logo" href="#"
+          ><img src="static/photos/logo.svg" alt="image of logo"
+        /></a>
+        <img
+          id="mobile-cta"
+          class="menu-icon"
+          src="static/photos/ham-menu.svg"
+          alt="menu icon"
+        />
+        <div class="nav-items">
+          <img
+            id="mobile-exit"
+            class="cross-icon"
+            src="static/photos/cross-icon.svg"
+            alt="close menu button"
+          />
+          <ul>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a
+                target="blank"
+                href="https://www.instagram.com/carsbymubashir/?hl=en"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {% block main %} {% endblock %}
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <h2>
+            Like what you see?
+            <h3>Hire me</h3>
+          </h2>
+        </div>
+        <div class="footer-bottom">
+          <h4>Back to top</h4>
+          <a href="#" class="arrow-top"
+            ><img src="static/photos/arrow-top.svg" alt="go to top button"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta");
+      const nav = document.querySelector("nav");
+      const mobileBtnExit = document.getElementById("mobile-exit");
+
+      mobileBtn.addEventListener("click", () => {
+        nav.classList.add("menu-btn");
+      });
+
+      mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+    </script>
+  </body>
+</html>
