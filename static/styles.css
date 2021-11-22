@@ -51,17 +51,19 @@ body {
   font-weight: bold;
 }
 
-.nav-container .cross-icon {
-  display: block;
-  margin-left: auto;
-  cursor: pointer;
-}
-
 .nav-container .nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  place-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-container .cross-icon {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 .nav-container .menu-icon {
@@ -73,8 +75,13 @@ body {
   margin-left: 0.8em;
 }
 
+.nav-container .logo:hover {
+  cursor: pointer;
+}
+
 .hero {
-  background: url("/static/photos/hero-mob-2.png") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.5))), url("/static/photos/hero-mob-2.png") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/static/photos/hero-mob-2.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -175,7 +182,7 @@ footer .footer-top h3 {
 }
 
 footer .footer-bottom {
-  background-color: black;
+  background-color: bl;
   padding-top: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,5 +206,64 @@ footer .footer-bottom .arrow-top {
 
 footer .footer-bottom .arrow-top img {
   padding-bottom: 0.4em;
+}
+
+@media only screen and (min-width: 900px) {
+  .nav-bar {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .nav-bar .menu-icon {
+    display: none;
+  }
+  .nav-bar .cross-icon {
+    display: none;
+  }
+  .nav-bar .nav-items {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    padding: 0;
+  }
+  .nav-bar .nav-items ul {
+    position: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    background: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.7em;
+    right: 140px;
+  }
+  .nav-bar .nav-items ul li {
+    float: left;
+  }
+  .nav-bar .nav-items ul li a {
+    margin: 0;
+    padding: 0 1.5em;
+    font-size: 1.1rem;
+  }
+  .hero {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/static/photos/hero-bg.png") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/photos/hero-bg.png") no-repeat;
+    background-size: cover;
+    background-position: 0% 40%;
+  }
+  .hero .hero-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hero .hero-container .hero-left {
+    text-align: left;
+  }
+  .hero .hero-container .hero-left h1 {
+    font-size: 4rem;
+  }
+  .hero .hero-container .hero-left h1 span {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
