@@ -16,24 +16,19 @@ body {
 
   .nav-items {
     display: none;
-    position: fixed;
-    background-color: $theme_blue;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    padding: 1em;
-    box-sizing: border-box;
-
-    .menu_btn {
-      display: block;
-    }
 
     ul {
-      margin-top: 7em;
+      position: fixed;
+      background-color: $theme_blue;
+      z-index: 50;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
       list-style-type: none;
-      padding: 0;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 1em;
       margin: 0;
 
       a {
@@ -41,7 +36,6 @@ body {
         text-decoration: none;
         display: block;
         padding: 1em;
-        text-align: center;
         font-size: 1.5em;
         text-decoration: dashed;
       }
@@ -60,16 +54,17 @@ body {
   .cross-icon {
     display: block;
     margin-left: auto;
+    margin-bottom: 5em;
     cursor: pointer;
   }
 
   .menu-icon {
-    cursor: pointer;
+    display: block;
     margin-right: 0.8em;
   }
 
-  .logo {
-    margin-left: 0.8em;
+  .menu-icon:hover {
+    cursor: pointer;
   }
 
   .logo:hover {
@@ -93,7 +88,7 @@ body {
       color: #1abdb3;
       font-weight: normal;
       font-size: 1.1rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.7em;
       margin-top: -0.2em;
     }
   }
@@ -169,7 +164,7 @@ footer {
   }
 
   .footer-bottom {
-    background-color: bl;
+    background-color: black;
     padding-top: 0.5em;
     display: flex;
     justify-content: center;
@@ -207,27 +202,23 @@ footer {
 
     .nav-items {
       display: block;
-      margin: 0 auto;
-      background: none;
-      padding: 0;
 
       ul {
         position: inherit;
         display: flex;
         width: auto;
         background: none;
+        text-align: right;
         height: auto;
         margin: 0;
         padding: 0;
-        margin-top: 0.7em;
-        right: 140px;
 
         li {
           float: left;
 
           a {
-            margin: 0;
-            padding: 0 1.5em;
+            margin: 0 1.5em;
+            padding: 0;
             font-size: 1.1rem;
           }
         }
