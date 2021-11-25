@@ -1,2 +1,84 @@
 {% extends "layout.html" %} {% block title %} About {% endblock %} {% block main
-%} bruh {% endblock %}
+%}
+<div class="about">
+  <div class="about-container">
+    <h1>About me</h1>
+    <div class="about-content">
+      <img src="/static/photos/hello.jpeg" alt="hello" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quis
+        praesentium atque unde laudantium, id molestiae consequatur. Odio in
+        magni similique officiis, cupiditate illum. Tempora libero saepe facere
+        perferendis a quia eius cum aperiam officiis similique. Laboriosam
+        voluptatibus reiciendis dolorum fuga reprehenderit omnis dignissimos
+        voluptas, odit explicabo, est doloremque cum.
+      </p>
+    </div>
+    <div class="contact-container">
+      <h1>Contact me</h1>
+      <div class="contact-form">
+        <form
+          id="my-form"
+          action="https://formspree.io/f/xlezrgpk"
+          method="POST"
+        >
+          <div class="row">
+            <div class="col-25"><label>Email:</label></div>
+            <div class="col-75">
+              <input
+                type="email"
+                placeholder="Your email"
+                name="email"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25"><label>Message:</label></div>
+            <div class="col-75">
+              <textarea
+                name="message"
+                placeholder="Say something..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">&nbsp;</div>
+            <div class="col-75">
+              <button id="my-form-button">Submit</button>
+            </div>
+          </div>
+          <div class="col-25">&nbsp;</div>
+          <div class="col-75">
+            <p id="my-form-status"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var form = document.getElementById("my-form");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset();
+      })
+      .catch((error) => {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      });
+  }
+  form.addEventListener("submit", handleSubmit);
+</script>
+{% endblock %}
