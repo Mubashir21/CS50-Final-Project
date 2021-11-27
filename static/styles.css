@@ -276,6 +276,26 @@ footer .footer-bottom .arrow-top img {
   color: black;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0e1620;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6bd8d1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6bd8d1c5;
+}
+
 @media only screen and (min-width: 900px) {
   .nav-bar {
     width: 80%;
@@ -380,6 +400,22 @@ footer .footer-bottom .arrow-top img {
     content: " ";
     display: block;
     clear: both;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .nav-bar {
+    width: 65%;
+  }
+  .hero .hero-container {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .grid-container {
+    width: 65%;
+  }
+  .about-container {
+    width: 65%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

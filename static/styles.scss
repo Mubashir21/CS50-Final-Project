@@ -261,6 +261,27 @@ footer {
   }
 }
 
+// custom scroll-bar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $theme_blue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6bd8d1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6bd8d1c5;
+}
+
 @media only screen and (min-width: 900px) {
   .nav-bar {
     width: 80%;
@@ -382,5 +403,26 @@ footer {
       display: block;
       clear: both;
     }
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .nav-bar {
+    width: 65%;
+  }
+
+  .hero {
+    .hero-container {
+      width: 65%;
+      margin: 0 auto;
+    }
+  }
+
+  .grid-container {
+    width: 65%;
+  }
+
+  .about-container {
+    width: 65%;
   }
 }
