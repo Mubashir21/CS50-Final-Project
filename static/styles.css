@@ -337,6 +337,90 @@ footer .footer-bottom .arrow-top img {
   cursor: pointer;
 }
 
+#myImg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 800px;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -471,6 +555,9 @@ footer .footer-bottom .arrow-top img {
             flex: 50%;
     max-width: 48%;
   }
+  .modal-content {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 1700px) {
@@ -496,6 +583,9 @@ footer .footer-bottom .arrow-top img {
     -webkit-box-flex: 25%;
             flex: 25%;
     max-width: 24%;
+  }
+  .modal-content {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
