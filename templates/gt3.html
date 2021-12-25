@@ -1,0 +1,179 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Porsche 911 GT3</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0001.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0007.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0012.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0013.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0015.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0020.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0113.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0026.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0031.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0032.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0065.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0069.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0087.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0089.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0093.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0095.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0118.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0128.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0171.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0096.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0099.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0101.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0103.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0108.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT3/DSC_0111.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}

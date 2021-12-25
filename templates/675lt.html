@@ -1,0 +1,184 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Mclaren 675LT</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0017.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0018.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0021.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0022.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0024.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0026.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0120.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0027.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0028.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0030.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0032.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0033.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0036.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0037.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0038.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0045.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0048.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0055.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0062.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0072.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0087-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0091.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0096.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0103-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0111.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/white-675LT/DSC_0149-Edit.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}

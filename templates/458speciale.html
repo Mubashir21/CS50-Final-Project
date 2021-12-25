@@ -1,0 +1,114 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Ferrari 458 Speciale</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0153.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0154-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0174.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0177-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0160-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0172.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0179.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0165.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0167.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0171-Edit.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0180.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/458-Speciale/DSC_0163.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}

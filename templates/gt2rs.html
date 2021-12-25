@@ -1,0 +1,174 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Porsche GT2 RS</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0038-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0044.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0046-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0092-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0094-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0097.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0047.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0050.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0052-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0053-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0099.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0100.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0055-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0057-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0062-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0101.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0103.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0132.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0065-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0069-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0080-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0111-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0122.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/GT2RS/DSC_0133.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}

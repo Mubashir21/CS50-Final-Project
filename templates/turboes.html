@@ -1,0 +1,134 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Porsche 911 Turbo S Exclusive Series</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0083.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0087.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0089.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0138.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0139.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0102.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0105.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0112.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0114.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0124.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0122.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0126.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0140.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0151.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0127.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/turbo-S-ES/DSC_0131.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+
+<div class="gallery">
+  <div class="gallery-container">
+    <div class="header">
+      <p>Riyadh Car Show 2019</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0320.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0333.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0342.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0345.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0353.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0373.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0385.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0388-2.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0393.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0395.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0402.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0410.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0411.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0416.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0423.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0435.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0450.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0454.jpg"
+        />
+      </div>
+      <div class="gallery-column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0456.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0465-Edit.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0475-2.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0481.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0517-Edit-2.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0519.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0530.jpg"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="../static/photos/RCS-2019/DSC_0375.jpg"
+        />
+      </div>
+      <!-- modal div for when image is clicked -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // to handle the modal views when images are clicked
+
+  // gets the modal div
+  var modal = document.querySelector("#myModal");
+  // gets all the images in the gallery
+  var images = document.querySelectorAll(".myImages");
+  // gets the empty image tag where image are to be inserted
+  var modalImg = document.querySelector("#modalImg");
+
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  }
+
+  var span = document.querySelectorAll(".close")[0];
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+</script>
+{% endblock %}
