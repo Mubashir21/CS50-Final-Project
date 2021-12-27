@@ -128,7 +128,7 @@ body {
   color: #1abdb3;
   font-weight: normal;
   font-size: 1.1rem;
-  letter-spacing: 0.8em;
+  letter-spacing: 0.5em;
   margin-top: -0.2em;
 }
 
@@ -361,8 +361,8 @@ footer .footer-bottom .arrow-top img {
 
 .gallery-container p {
   padding: 0;
-  margin: 2em 0 1em 0;
-  font-size: 4rem;
+  margin: 2em 0 2em 0;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -563,7 +563,7 @@ footer .footer-bottom .arrow-top img {
   }
   .hero .hero-container .hero-left h1 span {
     font-size: 1.3rem;
-    letter-spacing: 1.2rem;
+    letter-spacing: 0.82rem;
   }
   .about-container {
     text-align: left;
