@@ -1,4 +1,3 @@
 flask
-tempfile
 werkzeug.exceptions
 gunicorn

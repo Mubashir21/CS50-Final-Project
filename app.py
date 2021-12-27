@@ -1,5 +1,4 @@
 from flask import Flask, flash, redirect, render_template, request, session
-from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 
 # Configure application
